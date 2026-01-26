@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Base</title>
+  <meta name="description" content="Base de portfolio (structure + styles), contenu à venir." />
+
+  <style>
+    :root{
+      --bg: #0b0f17;
+      --panel: rgba(255,255,255,.06);
+      --text: #eaf0ff;
+      --muted: rgba(234,240,255,.70);
+      --border: rgba(255,255,255,.12);
+      --max: 1100px;
+      --radius: 16px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(99,102,241,.22), transparent 60%),
+        radial-gradient(900px 500px at 80% 0%, rgba(16,185,129,.18), transparent 55%),
+        var(--bg);
+      line-height:1.5;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .container{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    /* Header / Nav */
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(11,15,23,.85), rgba(11,15,23,.55));
+      border-bottom: 1px solid var(--border);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+    .logo{
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(99,102,241,.9), rgba(16,185,129,.9));
+      box-shadow: 0 10px 25px rgba(0,0,0,.25);
+    }
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap: 10px;
+      padding:0;
+      margin:0;
+    }
+    nav a{
+      display:inline-block;
+      padding: 10px 12px;
+      border-radius: 12px;
+      color: var(--muted);
+      border: 1px solid transparent;
+    }
+    nav a:hover{
+      color: var(--text);
+      border-color: var(--border);
+      background: rgba(255,255,255,.04);
+    }
+
+    /* Hero */
+    .hero{
+      padding: 64px 0 28px;
+    }
+    .hero-card{
+      border: 1px solid var(--border);
+      background: var(--panel);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(0,0,0,.35);
+    }
+    .hero h1{
+      margin: 0 0 8px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.1;
+    }
+    .hero p{
+      margin: 0;
+      color: var(--muted);
+      max-width: 70ch;
+    }
+
+    /* Sections */
+    main{
+      padding: 22px 0 72px;
+    }
+    section{
+      margin-top: 22px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    section h2{
+      margin: 0 0 8px;
+      font-size: 18px;
+      letter-spacing: .2px;
+    }
+    .placeholder{
+      color: var(--muted);
+      font-size: 14px;
+      border: 1px dashed rgba(255,255,255,.22);
+      border-radius: 12px;
+      padding: 14px;
+      background: rgba(0,0,0,.18);
+    }
+
+    /* Grid (future cards) */
+    .grid{
+      margin-top: 14px;
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+    .col-6{ grid-column: span 6; }
+    .col-12{ grid-column: span 12; }
+
+    /* Footer */
+    footer{
+      border-top: 1px solid var(--border);
+      padding: 18px 0;
+      color: var(--muted);
+    }
+
+    /* Responsive */
+    @media (max-width: 860px){
+      nav ul{ display:none; } /* simple: on cache le menu pour l’instant */
+      .col-6{ grid-column: span 12; }
+      .hero{ padding-top: 42px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#">
+          <span class="logo" aria-hidden="true"></span>
+          <span>Ton Nom</span>
+        </a>
+
+        <nav aria-label="Navigation principale">
+          <ul>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-card">
+        <h1>Portfolio (base)</h1>
+        <p>
+          Structure prête à l’emploi : header, sections, grille.  
+          Pour l’instant, rien n’est “développé” : uniquement un squelette propre.
+        </p>
+      </div>
+    </section>
+
+    <main>
+      <section id="apropos">
+        <h2>À propos</h2>
+        <div class="placeholder">Contenu à venir.</div>
+      </section>
+
+      <section id="projets">
+        <h2>Projets</h2>
+        <div class="placeholder">Cartes / liste de projets à venir.</div>
+
+        <div class="grid" aria-hidden="true">
+          <div class="col-6 placeholder">Emplacement projet</div>
+          <div class="col-6 placeholder">Emplacement projet</div>
+          <div class="col-12 placeholder">Emplacement projet (large)</div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="placeholder">Infos / liens (email, GitHub, LinkedIn) à venir.</div>
+      </section>
+    </main>
+
+    <footer>
+      <small>© <span id="year"></span> — Ton Nom</small>
+    </footer>
+  </div>
+
+  <script>
+    // Petit confort visuel : année automatique (pas “du contenu”, juste pratique)
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
