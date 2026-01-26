@@ -1,29 +1,63 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="bg" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="grid"></div>
+  </div>
 
-  <header class="hero">
-    <h1>Portfolio</h1>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <div class="brand">
+        <span class="brand__dot"></span>
+        <span class="brand__text">Portfolio</span>
+      </div>
 
-    <p class="name">Loïc COSMA AVERSENG</p>
-
-    <p class="subtitle">
-      Alternant BUT3 Réseaux et Télécoms<br>
-      Entreprise <span>EMB Électronique</span>
-    </p>
+      <nav class="nav" aria-label="Navigation">
+        <a href="#a-propos">À propos</a>
+        <a href="#parcours">Parcours</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section id="a-propos">
-      <h2>À propos</h2>
-      <p>
+  <main class="wrap">
+    <section class="hero card">
+      <div class="hero__content">
+        <h1 class="hero__title">Portfolio</h1>
+
+        <p class="hero__name">Loïc COSMA AVERSENG</p>
+
+        <div class="hero__chips">
+          <span class="chip">Alternant BUT3 Réseaux et télécoms</span>
+          <span class="chip chip--accent">EMB Électronique</span>
+        </div>
+      </div>
+
+      <div class="hero__side" aria-hidden="true">
+        <div class="badge">
+          <div class="badge__big">RT</div>
+          <div class="badge__small">Cybersécurité</div>
+        </div>
+        <div class="lines"></div>
+      </div>
+    </section>
+
+    <section id="a-propos" class="card section">
+      <div class="section__head">
+        <h2>À propos</h2>
+        <p class="section__hint">Présentation</p>
+      </div>
+
+      <p class="text">
         Actuellement en troisième année de BUT Réseaux et Télécommunications
         parcours cybersécurité à l’IUT Clermont Auvergne, je suis en alternance
         en tant que technicien en téléphonie et réseaux chez EMB Électronique à
@@ -34,13 +68,55 @@
       </p>
     </section>
 
-    <section id="parcours">
-      <h2>Parcours</h2>
-      <p>
-        <!-- Contenu à venir -->
-      </p>
+    <section id="parcours" class="card section">
+      <div class="section__head">
+        <h2>Parcours</h2>
+        <p class="section__hint">Timeline</p>
+      </div>
+
+      <div class="timeline">
+        <article class="t-item">
+          <div class="t-dot"></div>
+          <div class="t-card">
+            <div class="t-top">
+              <h3>Expérience / formation</h3>
+              <span class="t-date">—</span>
+            </div>
+            <p class="t-text">Emplacement à remplir (poste, école, détails).</p>
+          </div>
+        </article>
+
+        <article class="t-item">
+          <div class="t-dot"></div>
+          <div class="t-card">
+            <div class="t-top">
+              <h3>Expérience / formation</h3>
+              <span class="t-date">—</span>
+            </div>
+            <p class="t-text">Emplacement à remplir.</p>
+          </div>
+        </article>
+
+        <article class="t-item">
+          <div class="t-dot"></div>
+          <div class="t-card">
+            <div class="t-top">
+              <h3>Expérience / formation</h3>
+              <span class="t-date">—</span>
+            </div>
+            <p class="t-text">Emplacement à remplir.</p>
+          </div>
+        </article>
+      </div>
     </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> — Loïc COSMA AVERSENG</p>
+    </footer>
   </main>
 
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
