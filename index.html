@@ -3,117 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-
+  <title>Portfolio — Loïc Cosma Averseng</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg" aria-hidden="true">
-    <div class="blob b1"></div>
-    <div class="blob b2"></div>
-    <div class="blob b3"></div>
-    <div class="grid"></div>
-  </div>
-
-  <header class="topbar">
-    <div class="wrap topbar__inner">
-      <div class="brand">
-        <span class="brand__dot"></span>
-        <span class="brand__text">Portfolio</span>
-      </div>
-
-      <nav class="nav" aria-label="Navigation">
-        <a href="#a-propos">À propos</a>
-        <a href="#parcours">Parcours</a>
-      </nav>
+  <header class="site-header">
+    <div class="container">
+      <p class="kicker">Portfolio</p>
+      <h1>Loïc Cosma Averseng</h1>
+      <p class="subtitle">BUT Réseaux & Télécommunications — Parcours Cybersécurité</p>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero card">
-      <div class="hero__content">
-        <h1 class="hero__title">Portfolio</h1>
-
-        <p class="hero__name">Loïc COSMA AVERSENG</p>
-
-        <div class="hero__chips">
-          <span class="chip">Alternant BUT3 Réseaux et télécoms</span>
-          <span class="chip chip--accent">EMB Électronique</span>
-        </div>
-      </div>
-
-      <div class="hero__side" aria-hidden="true">
-        <div class="badge">
-          <div class="badge__big">RT</div>
-          <div class="badge__small">Cybersécurité</div>
-        </div>
-        <div class="lines"></div>
+  <main class="container">
+    <!-- Intro -->
+    <section class="section" id="intro">
+      <h2>Intro portfolio</h2>
+      <div class="card">
+        <p>
+          Je m’appelle Loïc Cosma Averseng, étudiant en troisième année de BUT Réseaux et Télécommunications, parcours Cybersécurité.
+          Passionné par les technologies numériques et les infrastructures informatiques, j’ai choisi cette formation afin d’acquérir des
+          compétences solides en administration réseau, sécurité des systèmes et protection des données. Mon intérêt pour la cybersécurité
+          s’est développé face aux enjeux actuels liés aux cybermenaces et à la nécessité croissante de sécuriser les infrastructures numériques
+          des entreprises.
+        </p>
+        <p>
+          Dans le cadre de ma formation, j’effectue une alternance en tant que technicien réseau et téléphonie au sein de l’entreprise EMB
+          électronique à Colomiers (31). Cette expérience professionnelle me permet de mettre en pratique mes connaissances théoriques, de
+          développer mon autonomie et de renforcer mes compétences techniques sur le terrain.
+        </p>
       </div>
     </section>
 
-    <section id="a-propos" class="card section">
-      <div class="section__head">
-        <h2>À propos</h2>
-        <p class="section__hint">Présentation</p>
-      </div>
+    <!-- Compétences techniques -->
+    <section class="section" id="competences">
+      <h2>Compétences techniques</h2>
 
-      <p class="text">
-        Actuellement en troisième année de BUT Réseaux et Télécommunications
-        parcours cybersécurité à l’IUT Clermont Auvergne, je suis en alternance
-        en tant que technicien en téléphonie et réseaux chez EMB Électronique à
-        Colomiers. J’y réalise des missions de paramétrage, installation et
-        maintenance des systèmes de téléphonie et d’appel malade, ainsi que des
-        équipements réseaux (routeurs fibre/4G, switchs, pare-feu et solutions
-        Wi-Fi).
-      </p>
-    </section>
-
-    <section id="parcours" class="card section">
-      <div class="section__head">
-        <h2>Parcours</h2>
-        <p class="section__hint">Timeline</p>
-      </div>
-
-      <div class="timeline">
-        <article class="t-item">
-          <div class="t-dot"></div>
-          <div class="t-card">
-            <div class="t-top">
-              <h3>Expérience / formation</h3>
-              <span class="t-date">—</span>
-            </div>
-            <p class="t-text">Emplacement à remplir (poste, école, détails).</p>
-          </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Réseaux</h3>
+          <p>
+            Au cours de ma formation, j’ai développé des compétences solides en réseaux informatiques. J’ai appris à configurer et administrer
+            des équipements tels que des routeurs et des switchs (configuration VLAN, routage statique et dynamique, DHCP, DNS). Lors de travaux
+            pratiques, j’ai notamment réalisé la mise en place d’une architecture réseau complète sous Cisco Packet Tracer et sur matériel réel,
+            avec segmentation du réseau et sécurisation des accès.
+          </p>
         </article>
 
-        <article class="t-item">
-          <div class="t-dot"></div>
-          <div class="t-card">
-            <div class="t-top">
-              <h3>Expérience / formation</h3>
-              <span class="t-date">—</span>
-            </div>
-            <p class="t-text">Emplacement à remplir.</p>
-          </div>
+        <article class="card">
+          <h3>Télécommunications</h3>
+          <p>
+            La formation m’a également permis d’acquérir des bases techniques en télécommunications, notamment sur les supports de transmission
+            (fibre optique, cuivre), les signaux et les protocoles de communication. J’ai participé à des travaux pratiques de mesure et
+            d’analyse de signaux à l’aide d’oscilloscopes et d’analyseurs de spectre, ainsi qu’à des projets portant sur l’étude et le
+            dimensionnement d’une liaison de communication.
+          </p>
         </article>
 
-        <article class="t-item">
-          <div class="t-dot"></div>
-          <div class="t-card">
-            <div class="t-top">
-              <h3>Expérience / formation</h3>
-              <span class="t-date">—</span>
-            </div>
-            <p class="t-text">Emplacement à remplir.</p>
-          </div>
+        <article class="card">
+          <h3>Téléphonie</h3>
+          <p>
+            En téléphonie, j’ai travaillé sur la mise en place et la configuration de solutions de téléphonie sur IP (VoIP). Par exemple, j’ai
+            réalisé l’installation et la configuration d’un IPBX (type Asterisk), la création de postes utilisateurs, ainsi que la
+            configuration de scénarios d’appels. Ces projets m’ont permis de comprendre le fonctionnement des protocoles comme SIP et d’assurer
+            l’intégration de la téléphonie dans une infrastructure réseau existante.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Cybersécurité</h3>
+          <p>
+            Dans le domaine de la cybersécurité, j’ai acquis des compétences en sécurisation des systèmes et des réseaux : configuration de
+            pare-feu, mise en place de VPN, gestion des droits d’accès et analyse de vulnérabilités. Lors de projets pratiques, j’ai effectué
+            des audits de sécurité sur des machines virtuelles, réalisé des tests d’intrusion encadrés et mis en place des politiques de
+            sécurité afin de protéger une infrastructure contre différentes menaces.
+          </p>
         </article>
       </div>
     </section>
 
-    <footer class="footer">
-      <p>© <span id="year"></span> — Loïc COSMA AVERSENG</p>
-    </footer>
+    <!-- Qualités -->
+    <section class="section" id="qualites">
+      <h2>Qualités</h2>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Rigueur</h3>
+          <p>
+            La configuration et la sécurisation des infrastructures réseau demandent précision et méthode. J’accorde une attention particulière
+            aux détails afin de garantir un travail fiable et structuré.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Autonomie</h3>
+          <p>
+            Grâce à mon alternance, j’ai appris à gérer des missions techniques de manière autonome, à diagnostiquer des problèmes et à proposer
+            des solutions adaptées tout en respectant les délais.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Adaptabilité</h3>
+          <p>
+            Le domaine des réseaux et de la cybersécurité évolue constamment. Je sais m’adapter aux nouveaux outils, aux environnements
+            techniques variés et aux situations imprévues afin de répondre efficacement aux besoins.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Esprit d’équipe</h3>
+          <p>
+            Habitué au travail en mode projet, je sais collaborer avec différents interlocuteurs, partager mes connaissances et contribuer
+            efficacement à la réussite collective.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projets -->
+    <section class="section" id="projets">
+      <h2>Projets</h2>
+
+      <article class="card">
+        <h3>Projet 1 – Mise en place et sécurisation d’une infrastructure réseau d’entreprise</h3>
+        <p>
+          Dans le cadre de ma troisième année, j’ai réalisé un projet consistant à concevoir et déployer une infrastructure réseau complète de
+          type entreprise. Ce projet incluait la mise en place des équipements réseau, la configuration des services (DHCP, DNS, serveurs),
+          ainsi que l’hébergement d’un site web accessible sur le réseau. Une fois l’infrastructure fonctionnelle, j’ai mené une phase de tests
+          d’intrusion afin d’identifier les vulnérabilités présentes. À l’issue du pentest, j’ai proposé et mis en œuvre des correctifs de
+          sécurité (renforcement des configurations, filtrage, sécurisation des accès) afin d’améliorer la résilience de l’infrastructure face
+          aux attaques.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Projet 2 – Pentesting et audit de sécurité</h3>
+        <p>
+          Toujours en troisième année, j’ai participé à un projet centré sur le pentesting et l’audit de sécurité d’un système d’information.
+          Nous avons réalisé des phases de reconnaissance, d’analyse de vulnérabilités et d’exploitation afin d’évaluer le niveau de sécurité de
+          l’infrastructure cible. À la suite de ces tests, nous avons rédigé un rapport d’audit détaillé présentant les failles identifiées,
+          leur niveau de criticité ainsi que des recommandations techniques pour corriger les vulnérabilités et renforcer la sécurité globale du
+          système.
+        </p>
+      </article>
+    </section>
+
+    <!-- Alternance -->
+    <section class="section" id="alternance">
+      <h2>Alternance</h2>
+
+      <div class="card">
+        <p>
+          Dans le cadre de mon alternance en tant que technicien réseau et téléphonie, j’interviens sur différentes missions d’installation, de
+          configuration et de maintenance d’infrastructures de communication. Je réalise notamment des installations de solutions de téléphonie
+          d’entreprise, incluant le déploiement et la configuration des équipements. J’interviens également dans la mise en place de systèmes
+          d’appels malades au sein d’EHPAD, en assurant leur installation et leur bon fonctionnement. En complément, je prends en charge des
+          opérations de service après-vente (SAV), de maintenance et de support technique auprès des clients.
+        </p>
+        <p>
+          Sur la partie réseau, j’assure l’installation et la configuration de routeurs fibre et 4G ainsi que le déploiement de solutions Wi-Fi
+          chez les clients, afin de garantir une connectivité performante et sécurisée. L’ensemble de ces missions me permet de développer mes
+          compétences techniques, mon autonomie et mon sens du service sur le terrain.
+        </p>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Loïc Cosma Averseng — Portfolio</p>
+    </div>
+  </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
